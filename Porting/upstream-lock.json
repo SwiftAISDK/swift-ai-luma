@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "packages": [
+    {
+      "name": "@ai-sdk/luma",
+      "reviewedVersion": "3.0.69",
+      "ledgerKind": "provider",
+      "evidence": "`AIProviders.luma`, `LumaImageModel`, `LumaProviderTests.swift`",
+      "reviewStatus": "imported-reviewed-with-gaps",
+      "archiveIntegrity": "sha512-3Q+hVO1nsJnWqAv5gb8+GgT6hbzdmoW2lAl3KGiv32RrU0+0btB19kh4ZZmrkVZoJ+3IPKuzRrGT2uWRVDfSng==",
+      "sourceRef": "npm:@ai-sdk/luma@3.0.69",
+      "testRef": "682e2dd71456f14f9da33a1b983d1998c3a1184c",
+      "testRefRelationship": "inventory-snapshot-not-release-verified",
+      "contractFamilies": [],
+      "contractReview": "not-imported; inspect upstream declarations before extraction"
+    }
+  ]
+}

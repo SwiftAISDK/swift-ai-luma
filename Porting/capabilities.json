@@ -1,0 +1,16 @@
+[
+  {
+    "order": 35,
+    "providerID": "luma",
+    "upstreamPackage": "@ai-sdk/luma",
+    "factoryNames": [
+      "AIProviders.luma"
+    ],
+    "capabilities": [
+      "image"
+    ],
+    "files": false,
+    "skills": false,
+    "notes": "Luma images mirror upstream Luma 3.0.69: `LUMA_API_KEY`, bearer auth, custom base URL and headers, versioned user-agent suffix, `image`/`imageModel` aliases, `luma.image` provider IDs, `photon-1` and `photon-flash-1` model IDs, `/dream-machine/v1/generations/image`, async polling, unauthenticated generated image download, warnings for unsupported size/seed, `providerOptions.luma` referenceType/images/polling schema, URL-only image references, response metadata, and unsupported language/embedding families. File/mask image capabilities are now exposed as async Bool? getters; unrecognized models remain unknown. The 2026-10-23 pass: Polling and status resource IDs are encoded as one path segment, including reserved characters and standalone dots."
+  }
+]
