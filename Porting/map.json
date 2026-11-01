@@ -24,7 +24,8 @@
     "tests": [
       "Tests/SwiftAILumaTests/FixtureDownloadTransport.swift",
       "Tests/SwiftAILumaTests/LumaProviderTests.swift",
-      "Tests/SwiftAILumaTests/TestSupport.swift"
+      "Tests/SwiftAILumaTests/TestSupport.swift",
+      "Tests/SwiftAILumaTests/Weekly20261101CredentialsTests.swift"
     ],
     "resources": []
   },

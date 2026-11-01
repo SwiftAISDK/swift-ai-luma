@@ -3,16 +3,19 @@
   "packages": [
     {
       "name": "@ai-sdk/luma",
-      "reviewedVersion": "3.0.69",
+      "reviewedVersion": "3.0.73",
       "ledgerKind": "provider",
-      "evidence": "`AIProviders.luma`, `LumaImageModel`, `LumaProviderTests.swift`",
+      "evidence": "`AIProviders.luma`, `LumaImageModel`, `LumaProviderTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json",
       "reviewStatus": "imported-reviewed-with-gaps",
-      "archiveIntegrity": "sha512-3Q+hVO1nsJnWqAv5gb8+GgT6hbzdmoW2lAl3KGiv32RrU0+0btB19kh4ZZmrkVZoJ+3IPKuzRrGT2uWRVDfSng==",
-      "sourceRef": "npm:@ai-sdk/luma@3.0.69",
-      "testRef": "682e2dd71456f14f9da33a1b983d1998c3a1184c",
-      "testRefRelationship": "inventory-snapshot-not-release-verified",
-      "contractFamilies": [],
-      "contractReview": "not-imported; inspect upstream declarations before extraction"
+      "archiveIntegrity": "sha512-iRTPZ6TRT2yyqaG+FynN6/qcCuU73QsEdJ/h1NpX+HeI96ms9/qbcjxNN2Pnol6X/Etm8DFt1jqkZAz4XJUjzA==",
+      "sourceRef": "npm:@ai-sdk/luma@3.0.73",
+      "testRef": "9b603d36186b75e58d5479445a96c76f6e2d2700",
+      "testRefRelationship": "matching-release",
+      "contractFamilies": [
+        "ImageModelV4",
+        "ProviderV4"
+      ],
+      "contractReview": "2026-11-01: published declarations, source and exact matching-release changed tests reviewed; scoped dispositions and Swift translations are in Docs/WeeklyUpstreamAudit20261101.json. Existing broader product gaps remain; reviewed delta is not full-package parity."
     }
   ]
 }
