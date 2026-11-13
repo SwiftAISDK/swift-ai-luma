@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "package": "swift-ai-luma",
-  "version": "1.1.1",
-  "releaseID": "weekly-upstream-20261108",
+  "version": "1.1.2",
+  "releaseID": "weekly-upstream-20261114",
   "source": {
-    "commit": "8e233ff96fb809445aff9a5c06bb6149a24b94da",
-    "baseCommit": "8e233ff96fb809445aff9a5c06bb6149a24b94da",
+    "commit": "07fbf86b82d83d9724bd03622e9e87e74395286f",
+    "baseCommit": "07fbf86b82d83d9724bd03622e9e87e74395286f",
     "workingTree": false,
-    "inputsSHA256": "987359720075cb67dd8bc45bdc049aee4c5d5a42b67a7eb148e697ce5d18bd77"
+    "inputsSHA256": "63e472c0fe891cb7636d225e1c6467e4761dc3721be68081f2afa9f0b656bb29"
   },
   "dependencies": [
     {
@@ -17,28 +17,28 @@
   ],
   "changes": [
     {
-      "id": "weekly-upstream-20261108",
-      "notes": "Image capability constants move to an internal catalog with the same one-image limit, photon input-file support and no mask support. Existing native image behavior matches; no declaration/test delta. Update request user-agent. The pre-existing lack of native Luma video remains separate from this image/version delta. Reviewed published upstream delta: @ai-sdk/luma 3.0.73 to 3.0.78. Validation passed: node Scripts/test-packages.mjs (all 52 owning packages plus the complete local facade; 3,965 reported tests and 33 explicit live skips); node Scripts/sdk.mjs dev test; node Scripts/sdk.mjs generate --check; node --test Scripts/tests/*.test.cjs (27 passed); core/provider isolation and version resolution; 52 deterministic package exports, 106 catalog consumers and four additional exact retained-minimum graphs; docs-site install/check/build (100 pages); git diff --check. No paid live-service calls were run. The publication pipeline requires successful Swift 6.3.3 CI at the exact canonical source before publishing.",
-      "compatibility": "Patch release for behavior/header corrections without new required owning API. Existing call sites and exact old selectors are retained. Direct minimums change only for concrete API use or required inherited behavior. Version-delta review does not establish full-package parity or live-service acceptance."
+      "id": "weekly-upstream-20261114",
+      "notes": "Refresh the versioned request identity while retaining the current native request, response and stream behavior. Internal upstream model-catalog reorganizations preserve the existing native policies. Reviewed npm delta: @ai-sdk/luma 3.0.78 to 3.0.83. Validation: `node Scripts/test-packages.mjs` passed all 52 owning suites and 1731 facade tests; tooling 27/27, generation/isolation checks, standalone exports and 106 minimum/latest consumers, documentation check and 101-page build passed. Publication requires green exact-source Swift 6.3.3 CI. Paid/live verification and full-package parity are not claimed.",
+      "compatibility": "Compatible behavior/header correction. Original public selectors are preserved. npm baselines and Swift SemVer are independent; this reviewed delta does not establish full-package or live-service parity."
     }
   ],
   "canonicalDirectory": "Packages/swift-ai-luma",
   "upstream": [
     {
       "name": "@ai-sdk/luma",
-      "reviewedVersion": "3.0.78",
+      "reviewedVersion": "3.0.83",
       "ledgerKind": "provider",
-      "evidence": "`AIProviders.luma`, `LumaImageModel`, `LumaProviderTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/WeeklyUpstreamAudit20261108.json",
+      "evidence": "`AIProviders.luma`, `LumaImageModel`, `LumaProviderTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/WeeklyUpstreamAudit20261108.json; 2026-11-14 delta: Docs/WeeklyUpstreamAudit20261114.json",
       "reviewStatus": "imported-reviewed-with-gaps",
-      "archiveIntegrity": "sha512-37avUzniTzE3uxwM0XP5j6gxs/sOi0inbXpuT7smjzBvWpHpCf+zZGJUTl0Cdvbmc3Bi4swOXRXVnwLcAW7KRw==",
-      "sourceRef": "npm:@ai-sdk/luma@3.0.78",
-      "testRef": "0f3a85f92d1ce06ccde01d662407ef83e097a712",
+      "archiveIntegrity": "sha512-Hnf5ZcqAVk1LCCPKPpN6oyW2FsKoKfuMY2XxujQZtuBmoz+mpAb+4pb6F2zqQGVP1K1ef5cUjU+Ha9doGPC/ww==",
+      "sourceRef": "npm:@ai-sdk/luma@3.0.83",
+      "testRef": "8bc7652cdb13fc84722666eb93f45acd0d131eee",
       "testRefRelationship": "matching-release",
       "contractFamilies": [
         "ImageModelV4",
         "ProviderV4"
       ],
-      "contractReview": "2026-11-08: published declarations/source and exact matching-release changed tests reviewed; native implementations, per-file dispositions and broader retained gaps are recorded in Docs/WeeklyUpstreamAudit20261108.json. Reviewed delta is not full-package or live-service parity."
+      "contractReview": "2026-11-14: verified published source/declarations and exact matching-release changed tests reviewed separately; native ports, per-file dispositions and retained gaps are recorded in Docs/WeeklyUpstreamAudit20261114.json. Delta review is not full-package or live-service parity."
     }
   ],
   "note": "Independent port. Imported test refs and contract review gaps retain their original status; export is not new upstream parity proof.",
@@ -57,7 +57,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-luma/Porting/map.json",
-      "sha256": "13f05a3fa8e4e377a2581f5bbcdc5aec0bfcbc4c2b4d132d2ea3a1171afbde98"
+      "sha256": "77e26578acb3668d4b6f3b5f2bb3be062dabd1252a6691466468a34fcd8d5933"
     },
     {
       "canonicalPath": "Packages/swift-ai-luma/README.md",
@@ -73,7 +73,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-luma/Sources/SwiftAILuma/LumaProvider.swift",
-      "sha256": "4df1e575fd1248a2bef371af4dbb0c3c51dbb9fcaf45099c714c4c924a12130c"
+      "sha256": "f6e7de9d53b33381274be1c2478918cbea5c1b0a9fa15862b6a9f389ef3a9dd2"
     },
     {
       "canonicalPath": "Packages/swift-ai-luma/Tests/SwiftAILumaTests/FixtureDownloadTransport.swift",
@@ -81,7 +81,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-luma/Tests/SwiftAILumaTests/LumaProviderTests.swift",
-      "sha256": "d0899dd04de18966445087b15d1de672babd8dc25b04f917f154183b3c9b03f8"
+      "sha256": "5db96b7baf5490d434fa200f260746597793da907bd2c62e1e0473a7e3590e89"
     },
     {
       "canonicalPath": "Packages/swift-ai-luma/Tests/SwiftAILumaTests/TestSupport.swift",
