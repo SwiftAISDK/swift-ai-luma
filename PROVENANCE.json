@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "package": "swift-ai-luma",
-  "version": "1.1.3",
-  "releaseID": "weekly-upstream-20261115",
+  "version": "1.1.4",
+  "releaseID": "weekly-upstream-20261122",
   "source": {
-    "commit": "1e543b35e0259a5bda888665dacf2d4a7f1bb0ed",
-    "baseCommit": "1e543b35e0259a5bda888665dacf2d4a7f1bb0ed",
+    "commit": "73e28c7d4106338c3030bc36700c5922aeb2ebd9",
+    "baseCommit": "73e28c7d4106338c3030bc36700c5922aeb2ebd9",
     "workingTree": false,
-    "inputsSHA256": "5508ffc6347bffaed13fb29409eb856df9a7796d3ebdcb6f623d1e8871b52999"
+    "inputsSHA256": "5b64cfae284ecf9a081f1c08d5b5dff83915b3c57b62669a3408e51a52961cb5"
   },
   "dependencies": [
     {
@@ -17,28 +17,28 @@
   ],
   "changes": [
     {
-      "id": "weekly-upstream-20261115",
-      "notes": "Align the versioned request identity with the reviewed published package while retaining native open String model IDs and existing request, response, option, error, stream and telemetry behavior. Derived TypeScript model-ID/catalog reorganizations preserve the existing native runtime policies. Reviewed npm delta: @ai-sdk/luma 3.0.83 to 3.0.84. Validation passed: node Scripts/test-packages.mjs (55 owning packages, 2451 owning tests and 1736 compatibility tests), generation checks, 27 tooling tests, isolation/version checks, deterministic exports and minimum-dependency consumers. Documentation check/build passed (104 pages). Publication is gated by exact-source Swift 6.3.3 CI; subsequent public refs and clients are recorded in Docs/ReleaseVerification20261115.json. Paid/live-service checks were not run; this delta does not claim full-package parity.",
-      "compatibility": "Compatible versioned request identity correction; existing public selectors and dependency minimums remain. npm baselines and Swift SemVer are independent."
+      "id": "weekly-upstream-20261122",
+      "notes": "Align the provider request identity with @ai-sdk/luma 3.0.86 after comparing source, declarations and matching-release tests against 3.0.84. Offline validation passed: node Scripts/test-packages.mjs (56 packages, 3672 owning tests and 1760 compatibility tests), generation, tooling, isolation, and version selection. See Docs/Archive/WeeklyUpstreamAudit20261122.md for retained gaps. Paid provider calls were skipped.",
+      "compatibility": "Source-compatible request-header update."
     }
   ],
   "canonicalDirectory": "Packages/swift-ai-luma",
   "upstream": [
     {
       "name": "@ai-sdk/luma",
-      "reviewedVersion": "3.0.84",
+      "reviewedVersion": "3.0.86",
       "ledgerKind": "provider",
-      "evidence": "`AIProviders.luma`, `LumaImageModel`, `LumaProviderTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/WeeklyUpstreamAudit20261108.json; 2026-11-14 delta: Docs/WeeklyUpstreamAudit20261114.json; 2026-11-15 delta: Docs/WeeklyUpstreamAudit20261115.json",
+      "evidence": "`AIProviders.luma`, `LumaImageModel`, `LumaProviderTests.swift`; 2026-11-01 delta: Docs/Archive/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/Archive/WeeklyUpstreamAudit20261108.json; 2026-11-14 delta: Docs/Archive/WeeklyUpstreamAudit20261114.json; 2026-11-15 delta: Docs/Archive/WeeklyUpstreamAudit20261115.json; 2026-11-22 delta: Docs/Archive/WeeklyUpstreamAudit20261122.json",
       "reviewStatus": "imported-reviewed-with-gaps",
-      "archiveIntegrity": "sha512-jSwI89hR0keQhWuRWkQ6Q6xucIwWbPcn3bboE/cjB4l0egl9qPPO7wbiWLgiqhswcxaJE4mzoRqdNTWLxl2Xtw==",
-      "sourceRef": "npm:@ai-sdk/luma@3.0.84",
-      "testRef": "0e8e0543aeda7d4dd4ce6eade0d5b7d5a43644c1",
+      "archiveIntegrity": "sha512-xCVzdwGCm+aE0V3m2lXwgcTd+uy9gsWj8M86esqgw8oii4PKM8D3/unsLnjNH+UhqOyuR9+yR8GdRbV1AS3clg==",
+      "sourceRef": "npm:@ai-sdk/luma@3.0.86",
+      "testRef": "3dad57f204c7332178d28c3467c7311875b66a3e",
       "testRefRelationship": "matching-release",
       "contractFamilies": [
         "ImageModelV4",
         "ProviderV4"
       ],
-      "contractReview": "2026-11-15: published source/declarations and exact matching-release tests reviewed separately. Native delta scenarios, per-file dispositions, unchanged-catalog evidence and explicit remaining gaps are recorded in Docs/WeeklyUpstreamAudit20261115.json. Required checks remain a separate gate; no full-package/live-service parity claim."
+      "contractReview": "2026-11-22: reviewed the published source and declarations and the matching-release test diffs. Native evidence and explicitly retained coverage gaps are in Docs/Archive/WeeklyUpstreamAudit20261122.json."
     }
   ],
   "note": "Independent port. Imported test refs and contract review gaps retain their original status; export is not new upstream parity proof.",
@@ -61,7 +61,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-luma/README.md",
-      "sha256": "405af39cd1718e537fd2faec63704eeda8635e3b003f3424739d223f07210795"
+      "sha256": "c8ca945316b2442d84868ee2bcf0a57c1f7363c4b52514abdacd9713f13d5ecb"
     },
     {
       "canonicalPath": "Packages/swift-ai-luma/Sources/SwiftAILuma/ImageInputCapabilities.swift",
@@ -73,7 +73,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-luma/Sources/SwiftAILuma/LumaProvider.swift",
-      "sha256": "fecd735d245e9f245fb294a3392dfa6d72ee8ca6dc30afe80b339a6154477939"
+      "sha256": "58447f6ff17e16e35f6e20570cf52c617a94afbc3ef124e96dd9cb35557adae0"
     },
     {
       "canonicalPath": "Packages/swift-ai-luma/Tests/SwiftAILumaTests/FixtureDownloadTransport.swift",
@@ -81,7 +81,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-luma/Tests/SwiftAILumaTests/LumaProviderTests.swift",
-      "sha256": "321ff81a581e1b3363657d0155321e19495098ada032174c1b9180ee7ea587a9"
+      "sha256": "ce3c11c79abf71b05b1b9a8c129ea4e4cb6b015583da70be619fb0f3e543f368"
     },
     {
       "canonicalPath": "Packages/swift-ai-luma/Tests/SwiftAILumaTests/TestSupport.swift",
